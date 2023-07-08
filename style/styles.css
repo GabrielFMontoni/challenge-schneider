@@ -1,11 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+
+:root {
+  --green: #3dcc58;
+  --white: #ffffff;
+  --bg-body: #f5f6fa;
+  --green-login: #61f07d;
+  --button: #00b7e9;
+  --button-hover: #3ac3e9;
+
+}
+
+
 html {
-    height: 100%;
-  }
-  body {
-    height: 100%;
-    
-    
-  }
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Asap', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+li>.nav-link {
+  color: var(--white)
+}
+
+main {
+  margin: 100px;
+}
 
 
+.bg-navbar {
+  background-color: var(--green);
+}
 
+.bg-content {
+  background-color: var(--bg-body);
+}
+
+.bg-login{
+  background-color: var(--green-login);
+}
+
+.bnt-sucess{
+  background-color: var(--button);
+  color: var(--white);
+}
+
+.bnt-sucess:hover{
+  background-color: var(--button-hover);
+  color: var(--white);
+}
