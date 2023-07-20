@@ -5,10 +5,11 @@
 :root {
   --green: #3dcc58;
   --white: #ffffff;
-  --bg-body: #f5f6fa;
+  --bg-body: #efeeec;
   --green-login: #61f07d;
   --button: #00b7e9;
   --button-hover: #3ac3e9;
+  --color-font-title: #333333;
 
 }
 
@@ -23,14 +24,20 @@ body {
   font-weight: 400;
   text-transform: none;
   letter-spacing: 1px;
+  background-color: var(--bg-body);
+  
+ 
 }
 
 li>.nav-link {
   color: var(--white)
 }
 
-main {
-  margin: 100px;
+main{
+  margin-top: 100px;
+ 
+ 
+  
 }
 
 
@@ -54,4 +61,29 @@ main {
 .bnt-sucess:hover{
   background-color: var(--button-hover);
   color: var(--white);
+}
+
+dialog::backdrop{
+  background-color: rgb(0 0 0 / .7);
+}
+
+dialog{
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 0 1rem rgb(0 0 0 / .3);
+  width: 80%;
+}
+
+#modal_close{
+  cursor: pointer;
+}
+
+h2, .perfil-name{
+  font-size: 2vw;
+  font-weight: 700;;
+  color: var(--color-font-title);
+}
+
+.perfil-name{
+  font-size: 1.5rem;
 }
