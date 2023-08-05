@@ -19,7 +19,10 @@
         <nav class="navbar fixed-top navbar-expand-md bg-navbar">
             <div class="nav_container container align-middle">
                 <a class="navbar-brand " href="#">
-                    <h1>Titulo</h1>
+                    <div class="title-content">
+                        <img src="./assets//logo/Green_Lions_logo.png" class="img-fluid img-logo" alt="">
+                        <h1 class="title">Green Lions</h1>
+                    </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -32,12 +35,13 @@
                             <a class="nav-link active " aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " aria-current="page" href="./marketplace.html">Produtos sustentáveis
+                            <a class="nav-link " aria-current="page" href="./pages/marketplace.html">Produtos
+                                sustentáveis
                             </a>
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">pag2</a>
+                            <a class="nav-link" aria-current="page" href="./pages/games.html">Games</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -45,13 +49,15 @@
                                 Sobre
                             </a>
                             <ul class="dropdown-menu bg-navbar">
-                                <li><a class="dropdown-item " href="./developers.html">Sobre os desenvolvedores</a></li>
-                                <li><a class="dropdown-item" href="#">Sobre a Schneider</a></li>
+                                <li><a class="dropdown-item " href="./pages/developers.html">Sobre os
+                                        desenvolvedores</a></li>
+                                <li><a class="dropdown-item" href="https://www.se.com/br/pt/about-us/company-profile/"
+                                        target="_blank">Sobre a Schneider</a></li>
 
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./login.html">Login</a>
+                            <a class="nav-link" aria-current="page" href="./pages/login.html">Login</a>
                         </li>
 
                     </ul>
@@ -62,7 +68,7 @@
     </header>
 
 
-    <main class=" row h-100 container-fluid h-100 d-flex justify-content-lg-around justify-content-md-center">
+    <main class=" row h-100 mt-3 container-fluid h-100 d-flex justify-content-lg-around justify-content-md-center">
 
         <div class="col-md col-lg-3 mt-5 d-none d-md-block">
             <section>
@@ -70,7 +76,7 @@
 
                     <div class="w-50 rounded-circler m-auto">
 
-                        <img src="./assets/perfil.png" class="card-img-top rounded-circle" alt="...">
+                        <img src="./assets/pictores-content/perfil.png" class="card-img-top rounded-circle" alt="...">
 
                     </div>
                     <div class="card-body text-center">
@@ -89,32 +95,38 @@
 
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
 
-                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <h3>Notícias sustentáveis:</h3>
                         <div class="carousel-inner">
 
                             <div class="carousel-item active">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae molestiae maxime,
-                                    autem harum repellendus officia?</p>
+                                <p>Inteligência Artificial: 4 aplicações que têm auxiliado na sustentabilidade</p>
+                                <a class="btn bnt-sucess "
+                                    href="https://www.noticiasustentavel.com.br/inteligencia-artificial-sustentabilidade/"
+                                    target="_blank">Venha conferir!</a>
                             </div>
                             <div class="carousel-item">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae molestiae maxime,
-                                    autem harum repellendus officia?</p>
+                                <p>Conheça 4 dicas para combater o desperdício de alimentos</p>
+                                <a class="btn bnt-sucess "
+                                    href="https://www.noticiasustentavel.com.br/dicas-combater-desperdicio-de-alimentos/"
+                                    target="_blank">Venha conferir!</a>
                             </div>
                             <div class="carousel-item">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae molestiae maxime,
-                                    autem harum repellendus officia?</p>
+                                <p>Como funcionará a logística reversa da bateria de carros elétricos?</p>
+                                <a class="btn bnt-sucess "
+                                    href="https://www.noticiasustentavel.com.br/logistica-reversa-bateria-carros-eletricos-descarte/"
+                                    target="_blank">Venha conferir!</a>
                             </div>
                         </div>
                     </div>
 
-                    <a class="btn bnt-sucess " href="./marketplace.html">Venha conferir!</a>
+
 
             </section>
         </div>
 
 
 
-     
+
 
 
         <div class="col-md-8 col-lg-6 mt-5 ">
@@ -138,23 +150,36 @@
 
                         </div>
 
-                        <img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg"
-                            alt="..." />
+                        <p class="fs-5 mb-4 text-start">Eu estou amando cultivar meu alimento em casa!</p>
+                        <img class="img-fluid rounded" src="./assets/pictores-content/horta-01.webp" alt="..." />
                     </figure>
 
                     <section class="mb-5">
-                        <p class="fs-5 mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-                            dolorem laboriosam, modi minima dicta sequi hic quis iusto ea, placeat quos facere
-                            nostrum sed consequuntur.</p>
-                        <p class="fs-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit expedita
-                            quidem eius at tempore nostrum enim. Natus laboriosam laborum tempora quasi vero culpa
-                            quisquam deleniti ipsum deserunt nostrum reprehenderit est ab nemo atque porro ratione
-                            ad aliquam, quia numquam dicta. Sint modi eligendi explicabo voluptates fugiat dicta
-                            sapiente quod libero.</p>
-                        <p class="fs-5 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                            facilis alias accusantium. Tenetur voluptatem soluta, non quidem ex velit at possimus
-                            quisquam veritatis reiciendis amet optio voluptatum ab, repellendus error quo totam
-                            quia? Repudiandae consequuntur voluptas quos totam?</p>
+                        <p class="fs-5 mb-4">Sempre fui uma pessoa que gosta de comida e saúde, então decidi plantar meu
+                            próprio alimento em casa. Foi uma das melhores decisões que já tomei!</p>
+                        <p class="fs-5 mb-4">Aqui estão algumas das razões pelas quais estou amando plantar alimentos em
+                            casa:</p>
+
+                        <p class="fs-5 mb-4">O alimento é mais fresco e saudável: O alimento que eu colho do meu próprio
+                            jardim é sempre
+                            muito mais fresco do que o que eu compro no mercado. Isso significa que ele tem mais sabor e
+                            nutrientes.</p>
+                        <p class="fs-5 mb-4">Não há pesticidas ou fertilizantes químicos: Eu não uso pesticidas ou
+                            fertilizantes químicos
+                            no meu jardim, o que significa que o meu alimento é seguro para mim e para o meio ambiente.
+                        </p>
+                        <p class="fs-5 mb-4">Estou economizando dinheiro: Plantar o meu próprio alimento me ajudou a
+                            economizar muito
+                            dinheiro. Eu não preciso mais comprar tantos alimentos no mercado, e eu até posso vender o
+                            meu excedente para ganhar algum dinheiro extra.</p>
+                        <p class="fs-5 mb-4">Estou relaxando e me divertindo: Plantar alimentos é uma atividade muito
+                            relaxante e
+                            divertida. É uma ótima maneira de se conectar com a natureza e de se exercitar.</p>
+
+                        <p class="fs-5 mb-4"> Se você está pensando em começar a plantar alimentos em casa, eu o
+                            encorajo a fazer isso! É
+                            uma ótima maneira de melhorar a sua saúde, economizar dinheiro e reduzir o seu impacto
+                            ambiental.</p>
 
 
                     </section>
@@ -180,8 +205,8 @@
                                     <p><span class="fw-bold">Maria Rita</span>, <i></i>comentou:</p>
 
                                     <div class="card-body border card bg-light">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum modi in
-                                            sunt, eveniet distinctio optio.</p>
+                                        <p>Obrigado por compartilhar sua experiência, Pedro! Estou pensando em fazer uma
+                                            horta vertical e sua plubicação me ajudou muito.</p>
                                     </div>
 
                                 </div>
@@ -212,16 +237,9 @@
                     </div>
 
                     <section class="mb-5">
-                        <p class="fs-5 mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-                            dolorem laboriosam, modi minima dicta sequi hic quis iusto ea, placeat quos facere
-                            nostrum sed consequuntur.</p>
-                        <p class="fs-5 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum,
-                            dignissimos?</p>
-                        <p class="fs-5 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                            facilis alias accusantium. Tenetur voluptatem soluta, non quidem ex velit at possimus
-                            quisquam veritatis reiciendis amet optio voluptatum ab, repellendus error quo totam
-                            quia? Repudiandae consequuntur voluptas quos totam?</p>
-
+                        <p class="fs-5 mb-4">Estou pensando em levar a sustentabilidade para o condomínio onde moro, mas
+                            não sei como abordar o síndico sobre isso. Alguém que já teve uma experiência
+                            semelhante,pode me auxiliar?</p>
 
                     </section>
                 </article>
@@ -247,8 +265,11 @@
                                     <p><span class="fw-bold">Leandro</span>, <i></i>comentou:</p>
 
                                     <div class="card-body border card bg-light">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum modi in
-                                            sunt, eveniet distinctio optio.</p>
+                                        <p>
+                                            Você pode conversar individualmente com alguns moradores que tenham essa
+                                            vontade. Depois disso, pode abordar esse assunto na assembleia dos
+                                            moradores.
+                                        </p>
                                     </div>
 
                                 </div>
@@ -267,23 +288,14 @@
             <section>
                 <div class="w-100 mt-5 p-3 border rounded text-center bg-light">
 
-                    <h2>çLorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae molestiae maxime,
-                        autem harum repellendus officia?</p>
+                    
+                    <p>Que tal aprender sustentabilidade jogando e se divertindo?</p>
 
                     <button id="btn_popup" class="btn bnt-sucess">Saiba Mais</button>
                     <dialog>
 
                         <div class="container d-md-block position-relative">
-                            <p class="p-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non corporis sint
-                                quos
-                                repellat voluptatem, dolor in delectus totam error tempore cupiditate culpa asperiores
-                                dolores quo odio fugit nemo debitis eaque itaque voluptatum ducimus enim nostrum hic
-                                maiores! Nemo laborum necessitatibus explicabo porro dolorem totam nam saepe molestias
-                                quisquam impedit commodi, nostrum laboriosam vero rerum similique illo at fugit
-                                voluptatum,
-                                molestiae quibusdam maxime voluptas labore magnam unde? Illum numquam similique
-                                eligendi.
+                            <p class="p-3">Jogos sustentáveis são uma ótima maneira de aprender sobre sustentabilidade de uma forma divertida e envolvente. Eles podem ajudar as pessoas a entender os problemas ambientais, aprender sobre soluções sustentáveis e até mesmo se envolver em ações sustentáveis.
                             </p>
 
                             <svg id="modal_close" class="position-absolute top-0 end-0 text-danger"
@@ -295,7 +307,7 @@
                             </svg>
 
                         </div>
-                        <a class="btn bnt-sucess" href="#">Quero aprender jogando!</a>
+                        <a class="btn bnt-sucess" href="./pages/games.html">Quero aprender jogando!</a>
                     </dialog>
 
                 </div>
