@@ -37,7 +37,7 @@ function userCheck() {
 function showAccess(access) {
 
     if (access) {
-        return location.href = 'index.html'
+        return location.href = '../index.html'
     } else {
         return alert("Usuario ou senha incorretos!")
     }
