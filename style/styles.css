@@ -109,3 +109,10 @@ h3,
   height: 60vh;
   
 }
+.pointer{
+  cursor: pointer;
+}
+.trofeu {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
+
+}
