@@ -14,28 +14,54 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 
-<body class="bg-content">
+<body class="bg-login">
+
+    <header class=" ">
+        <nav class="navbar navbar-expand-md bg-login ">
+            <div class="nav_container container align-middle">
+                <a class="navbar-brand " href="#">
+                    <div class="title-content">
+                        <img src="../assets/logo/Green_Lions_logo.png" class="img-fluid img-logo" alt="">
+                        <h1 class="title">Green Lions</h1>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-underline justify-content-between w-75 ">
+                        <li class="nav-item ">
+                            <a class="nav-link active " aria-current="page" href="../index.html">Home</a>
+                        </li>
 
 
-    <div class="row d-flex flex-column justify-content-center align-items-center">
-        <div class="col-2 col-md-3 col-lg-3"></div>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class=" d-flex flex-column justify-content-center align-items-center ">
+        <!-- <div class="col-2 col-md-3 col-lg-3"></div> -->
 
-        <div class="col-8 col-md-6 col-lg-5 border rounded border-success bg-login p-3 mt-5">
+        <div class="col-8 col-md-6 col-lg-8 border rounded border-success bg-login p-3 mt-5 mb-5 shadow-lg">
 
-            <form action="" class="was-validated justify-content-center">
+            <form action="" class="was-validated justify-content-center  ">
 
                 <h1 class="h1">Aproveite nossa plataforma, faça seu cadastro!</h1>
                 <p>Nossa plataforma foi desenvolvida para proporcionar uma experiência única para cada usuário. Pensando nisso, as informações solicitadas no momento do cadastro serão usadas para personalizar sua experiência. </p>
 
-                <div class="d-sm-flex gap-2  justify-content-between">
-                    <div class="mb-3 mt-3">
+                <div class="d-sm-flex flex-column gap-2  justify-content-between">
+                    <div class="mt-3 w-100">
                         <label for="uname" class="form-label">Primeiro nome:</label>
                         <input type="text" class="form-control" id="uname" name="uname" required="">
                         <div class="valid-feedback">Informação Válida</div>
                         <div class="invalid-feedback">Insira seu primeiro nome.</div>
                     </div>
 
-                    <div class="mb-3 mt-3">
+                    <div class="mb-3 mt-3 w-100">
                         <label for="uname" class="form-label">Sobrenome:</label>
                         <input type="text" class="form-control" id="uname" name="uname" required="">
                         <div class="valid-feedback">Informação Válida</div>
@@ -61,18 +87,21 @@
                     <option value="7">Rio Grande do Sul - Caxias do Sul</option>
                     <option value="8">Rio Grande do Sul - Porto Alegre</option>
                     <option value="9">Amazonas - Manaus</option>
+                    <option value="10">Unidade 1 - América do Sul</option>
+                    <option value="11">Unidade 2 - América do Sul</option>
+                    <option value="12">Unidade 3 - América do Sul</option>
                     <div class="invalid-feedback">Esccolha uma cidade.</div>
                 </select>
 
 
                 <div class="d-sm-flex gap-2 justify-content-between">
-                    <div class="mb-3">
+                    <div class="mb-3 w-50 mr-2">
                         <label for="pwd" class="form-label">Senha: </label>
                         <input type="password" class="form-control input_pswd" id="pwd" name="pswd" size="3" required="" onchange="checkPassword();">
                         <div class="valid-feedback">Informação Válida</div>
                         <div class="invalid-feedback">Informe a senha</div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 w-50 ml-2">
                         <label for="pwd" class="form-label">Confirmação de senha:</label>
                         <input type="password" class="form-control input_confirm" id="pwd" name="confirm" size="3" required="" onchange="checkPassword();">
                         <div class="valid-feedback">Informação Válida</div>
@@ -95,7 +124,7 @@
         </div>
     </div>
 
-    <div class="col-2  col-md-3 col-lg-3"></div>
+
 
 
 </body>

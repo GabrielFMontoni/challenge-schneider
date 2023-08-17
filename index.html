@@ -17,10 +17,11 @@
 <body>
 
     <header>
-        <nav class="navbar fixed-top navbar-expand-md bg-navbar">
-            <div class="nav_container container align-middle">
+        <nav class="navbar fixed-top navbar-expand-md bg-navbar ">
+            <div class="nav_container px-3 align-middle d-flex justify-content-between w-100 align-items-center">
+                <div class="d-flex justify-content-between ">
                 <a class="navbar-brand " href="#">
-                    <div class="title-content">
+                    <div class="d-flex align-items-center">
                         <img src="./assets//logo/Green_Lions_logo.png" class="img-fluid img-logo" alt="">
                         <h1 class="title">Green Lions</h1>
                     </div>
@@ -30,8 +31,9 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class=" collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav nav-underline justify-content-between w-75 ">
+            </div>
+                <div class=" collapse navbar-collapse justify-content-center pl-5 pr-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-underline justify-content-between w-100 ">
                         <li class="nav-item ">
                             <a class="nav-link active " aria-current="page" href="./index.html">Home</a>
                         </li>
@@ -47,24 +49,25 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./pages/ranking.html">Ranking</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Sobre
-                            </a>
-                            <ul class="dropdown-menu bg-navbar">
-                                <li><a class="dropdown-item " href="./pages/developers.html">Sobre os
-                                        desenvolvedores</a></li>
-                                <li><a class="dropdown-item" href="https://www.se.com/br/pt/about-us/company-profile/"
-                                        target="_blank">Sobre a Schneider</a></li>
-
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./pages/schneider.html">Schneider</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./pages/noticias.html">Notícias Positivas</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./pages/developers.html">Sobre o projeto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./pages/login.html">Login</a>
                         </li>
+                      
 
                     </ul>
+                    <div class="d-flex gap-2 flex-column mx-3 ">
+                        <img src="assets/bandeiras/brasil.jpg"  class="img-fluid pointer" height="40" width="40" alt="Bandeira Brasil">
+                        <img src="assets/bandeiras/espanhol.png" class="img-fluid pointer" height="40" width="40" alt="Bandeira Espanha">
+                    </div>
                 </div>
             </div>
             </div>
@@ -80,8 +83,34 @@
 
                     <div class="w-50 rounded-circler m-auto">
 
-                        <img src="./assets/pictores-content/perfil.png" class="card-img-top rounded-circle" alt="...">
+                        <img src="./assets/pictores-content/perfil.png" id="mudarPerfil" class="card-img-top rounded-circle pointer" alt="...">
+                        <dialog id="perfil" >
 
+                            <div class="container d-md-block position-relative">
+                                <p class="h1 mt-2 mb-3 text-center">Escolha sua imagem de perfil
+                                </p>
+                                <svg id="modal_close3" class="position-absolute top-0 end-0 text-danger"
+                                    xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-x-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+    
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                            <div class="homens">
+                                <img src="./assets/icones/homem1.png" class="img__perfil" alt="Homem moreno">
+                                <img src="./assets/icones/homem2.png" class="img__perfil" alt="Homem negro ">
+                                <img src="./assets/icones/homem3.png" class="img__perfil" alt="Homem branco">
+                            </div>
+                            <div class="mulheres">
+                                <img src="./assets/icones/mulher1.png" class="img__perfil" alt="Mulher negra">
+                                <img src="./assets/icones/mulher2.png" class="img__perfil" alt="Mulher branca ">
+                                <img src="./assets/icones/mulher3.png" class="img__perfil" alt="Mulher morena">
+                            </div>
+                            </div>
+                        </dialog>
                     </div>
                     <div class="card-body text-center">
 
@@ -114,6 +143,7 @@
                               </tr>
                             </tbody>
                           </table>
+                          <p class="text-primary">Ganhe pontos jogando e engajando postagens!</p>
                     </div>
 
                 </div>
@@ -241,9 +271,7 @@
                                                 10<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-arrow-up-square-fill  pointer " viewBox="0 0 16 16">
                                                     <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
                                                   </svg>
-                                                   1<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-arrow-down-square-fill pointer" viewBox="0 0 16 16">
-                                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
-                                                  </svg>
+                                                  
                                                   </div>
                                     </div>
                                     
@@ -260,10 +288,7 @@
                       </svg>
                     </p>
                      
-                    <p class="h3"> 6<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red" class="bi bi-arrow-down-square-fill pointer" viewBox="0 0 16 16">
-                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
-                      </svg>
-                      </p>
+              
                       </div>
                  
                 </section>
@@ -327,9 +352,7 @@
                                             23<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-arrow-up-square-fill  pointer " viewBox="0 0 16 16">
                                                 <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
                                               </svg>
-                                               2<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-arrow-down-square-fill pointer" viewBox="0 0 16 16">
-                                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
-                                              </svg>
+                                             
                                               </div>
                                     </div>
 
@@ -347,10 +370,7 @@
                      </svg>
                    </p>
                     
-                   <p class="h3"> 5<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red" class="bi bi-arrow-down-square-fill pointer" viewBox="0 0 16 16">
-                       <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
-                     </svg>
-                     </p>
+                 
                      </div>
             </section>
 
@@ -364,11 +384,14 @@
                     <p>Que tal aprender sustentabilidade jogando e se divertindo?</p>
 
                     <button id="btn_popup" class="btn bnt-sucess">Saiba Mais</button>
-                    <dialog>
+                    <dialog id="popup-jogos">
 
                         <div class="container d-md-block position-relative">
-                            <p class="p-3">Jogos sustentáveis são uma ótima maneira de aprender sobre sustentabilidade de uma forma divertida e envolvente. Eles podem ajudar as pessoas a entender os problemas ambientais, aprender sobre soluções sustentáveis e até mesmo se envolver em ações sustentáveis.
+                            <p class="p-3">Jogos sustentáveis são uma ótima maneira de aprender sobre sustentabilidade
+                                 de uma forma divertida e envolvente. Eles podem ajudar as pessoas a entender os problemas ambientais,
+                                  aprender sobre soluções sustentáveis e até mesmo se envolver em ações sustentáveis.
                             </p>
+                            <p>Além disso, você também pode ganhar pontos jogando, experimente!</p>
 
                             <svg id="modal_close" class="position-absolute top-0 end-0 text-danger"
                                 xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
@@ -383,9 +406,37 @@
                     </dialog>
 
                 </div>
+                <div class="w-100 mt-2 p-3 border rounded text-center bg-light">
+
+                    
+                    <p>Confira o vídeo pitch da plataforma 
+                        <span class="text-success">Green Lions</span> e acompanhe o <span class="text-warning">futuro da sustentabilidade!</span></p>
+                    <img src="assets/videopitch/youtubeicon.png" alt="Video do Youtube" class="img-fluid" width="150" height="150"><br>
+                    <button id="btn_popup2" class="btn btn-danger w-75 mt-2">Assista o vídeo</button>
+                    <dialog id="pitch">
+
+                        <div class="container d-md-block position-relative">
+                            <p class="h1 mt-2 mb-3">Video Pitch - Green Lions
+                            </p>
+                            <p>Venha conhecer a plataforma Green Lions. Acompanhe-nos a moldar o futuro tão desejado e a melhorar o mundo!</p>
+                            <iframe width="560" height="315" class="mt-3 mb-5" src="https://www.youtube.com/embed/RFbC_sBA-sA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <br>
+                            <svg id="modal_close2" class="position-absolute top-0 end-0 text-danger"
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+
+                        </div>
+                        <a class="btn btn-danger w-50 mb-2" href="https://www.youtube.com/watch?v=RFbC_sBA-sA" target="_blank" alt="Assista o video pelo youtube">Assistir pelo YouTube</a>
+                    </dialog>
+
+                </div>
             </section>
         </div>
-
+        
     </main>
 
 
