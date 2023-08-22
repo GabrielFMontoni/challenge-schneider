@@ -1,5 +1,5 @@
 <div style="display: flex;" align="center"><br>
-<h1>Challenge Schneider</h1>
+<h1>Green Lions</h1>
 Challenge do primeiro ano da turma de Engenharia de Software na FIAP!
   <br>
 <h4>Uma solução digital para os funcionários da empresa Schneider, para que seja espalhada a missão da empresa,
@@ -9,13 +9,13 @@ Challenge do primeiro ano da turma de Engenharia de Software na FIAP!
 
 
 ##  :hammer: Funcionalidades do projeto
-
+Confira o site da Green Lions!
 
 ## :file_folder: Acesso ao projeto
-
+https://challenge-schneider-sable.vercel.app/
 
 ## :hammer_and_wrench: Abrir e rodar o projeto
-
+Acesse o "index.html"
 
 
 ## Tecnologia Utilizada
