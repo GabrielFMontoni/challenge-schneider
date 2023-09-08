@@ -48,22 +48,22 @@
 
         <div class="col-8 col-md-6 col-lg-8 border rounded border-success bg-login p-3 mt-5 mb-5 shadow-lg">
 
-            <form action="" class="was-validated justify-content-center  ">
+            <form  class="was-validated justify-content-center  ">
 
                 <h1 class="h1">Aproveite nossa plataforma, faça seu cadastro!</h1>
                 <p>Nossa plataforma foi desenvolvida para proporcionar uma experiência única para cada usuário. Pensando nisso, as informações solicitadas no momento do cadastro serão usadas para personalizar sua experiência. </p>
 
                 <div class="d-sm-flex flex-column gap-2  justify-content-between">
                     <div class="mt-3 w-100">
-                        <label for="uname" class="form-label">Primeiro nome:</label>
-                        <input type="text" class="form-control" id="uname" name="uname" required="">
+                        <label for="uname" class="form-label" >Primeiro nome:</label>
+                        <input type="text" class="form-control" id="uname" name="uname" required="" minlength="3">
                         <div class="valid-feedback">Informação Válida</div>
                         <div class="invalid-feedback">Insira seu primeiro nome.</div>
                     </div>
-
+  
                     <div class="mb-3 mt-3 w-100">
                         <label for="uname" class="form-label">Sobrenome:</label>
-                        <input type="text" class="form-control" id="uname" name="uname" required="">
+                        <input type="text" class="form-control" id="lastname" name="lastname" required="" minlength="3">
                         <div class="valid-feedback">Informação Válida</div>
                         <div class="invalid-feedback">Insira seu sobrenome.</div>
                     </div>
@@ -71,11 +71,16 @@
 
                 <div class="mb-3">
                     <label for="eml" class="form-label">E-mail:</label>
-                    <input type="e-mail" class="form-control" id="eml" name="pswd" required="">
+                    <input type="e-mail" class="form-control" id="nameEmail" name="nameEmail" required="" minlength="3">
                     <div class="valid-feedback">Informação Válida.</div>
                     <div class="invalid-feedback">Informe um e-mail.</div>
                 </div>
-
+                <div class=" mt-3 w-100">
+                    <label for="user-job" class="form-label">Cargo:</label>
+                    <input type="text" class="form-control" id="user-job" name="user-job" required="">
+                    <div class="valid-feedback">Informação Válida</div>
+                    <div class="invalid-feedback">Insira seu cargo.</div>
+                </div>
                 <label for="unidades" class="form-label">Selecione a Unidade:</label>
                 <select class="form-select mb-3" id="unidades" required="">
                     <option selected value="1">São Paulo - São Paulo</option>
@@ -91,19 +96,21 @@
                     <option value="11">Unidade 2 - América do Sul</option>
                     <option value="12">Unidade 3 - América do Sul</option>
                     <div class="invalid-feedback">Esccolha uma cidade.</div>
+
+                  
                 </select>
 
-
+              
                 <div class="d-sm-flex gap-2 justify-content-between">
                     <div class="mb-3 w-50 mr-2">
                         <label for="pwd" class="form-label">Senha: </label>
-                        <input type="password" class="form-control input_pswd" id="pwd" name="pswd" size="3" required="" onchange="checkPassword();">
+                        <input type="password" class="form-control input_pswd" id="password" name="password" size="3" required="" onchange="checkPassword()">
                         <div class="valid-feedback">Informação Válida</div>
                         <div class="invalid-feedback">Informe a senha</div>
                     </div>
                     <div class="mb-3 w-50 ml-2">
                         <label for="pwd" class="form-label">Confirmação de senha:</label>
-                        <input type="password" class="form-control input_confirm" id="pwd" name="confirm" size="3" required="" onchange="checkPassword();">
+                        <input type="password" class="form-control input_confirm" id="pwd" name="confirm" size="3" required="" onchange="checkPassword()">
                         <div class="valid-feedback">Informação Válida</div>
                         <div class="invalid-feedback">Informe a senha</div>
                     </div>
@@ -115,7 +122,7 @@
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback">Clique em concordar para seguir</div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary mt-3 ">Finalizar cadastro</button>
+                        <button type="submit" class="btn btn-primary mt-3 " id="btn-input">Finalizar cadastro</button>
                     </div>
                 </div>
 
@@ -128,7 +135,7 @@
 
 
 </body>
-<script src="../js/cadastro.js"></script>
+<script  src="../js/cadastro.js"></script>
 
 
 </html>

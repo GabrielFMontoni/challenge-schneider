@@ -116,15 +116,17 @@
                         </dialog>
                     </div>
                     <div class="card-body text-center">
-
-                        <p class="perfil-name m-3">Kátia Fernandez</p>
-                        <p class="m-3 h5">Tech recruiter</p>
-                        <p class="m-3"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green"
+                        <div class="d-flex justify-content-center gap-2">
+                            <p class="perfil-name mt-3" id="perfil-name-first"></p>
+                            <p class="perfil-name mt-3" id="perfil-name-last"></p>
+                        </div>
+                        <p class="h5 " id="job-title"></p>
+                        <p class="m-3" id="user-points"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green"
                                 class="bi bi-caret-up-square-fill mb-1" viewBox="0 0 16 16">
                                 <path
                                     d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z" />
                             </svg>
-                            986 pontos</p>
+                            </p>
                         <p class="m-3 "><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
                                 class="bi bi-reception-4 mb-1" viewBox="0 0 16 16">
                                 <path
@@ -140,8 +142,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row" class="bg-warning">29</th>
-                                    <td class="bg-warning">Katia Fernandez</td>
-                                    <td class="bg-warning">986 pts</td>
+                                    <td class="bg-warning" id="name-ranking-index">Katia Fernandez</td>
+                                    <td class="bg-warning" id="points-ranking-index">986 pts</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">30</th>
@@ -466,14 +468,14 @@
 
         </div>
 
-      
+
 
 
         <footer class="bg-dark text-light p-1 m-">
 
             <div class=" d-block mt-2">
                 <div class="d-flex w-100 justify-content-lg-around mb-2 ">
-    
+
                     <p>Assine nossa newsletter para receber informações sobre sustentabilidade.</p>
                     <form class="form-inline trexty">
                         <div class="input-group d-flex gap-2">
@@ -488,13 +490,14 @@
                     <p>&copy; 2023 Green Lions - Todos os direitos reservados.</p>
                 </div>
             </div>
-    
+
         </footer>
     </main>
 
 
 
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
+   
 </body>
 
 
