@@ -41,7 +41,9 @@ function upDate (){
     const userNameLast = document.querySelector('#perfil-name-last');
     const userJobTitle = document.querySelector('#job-title');
     const points = document.querySelector('#user-points');
+    const positionGlobal = document.querySelector('#position-global')
 
+    positionGlobal.innerText = `Posição Global: #${login[0].userRating}` 
     nameRanking.innerText = login[0].userName;
     pointsRanking.innerText = `${login[0].userPoints} pts` 
     userNamefirst.innerText= login[0].userName;
