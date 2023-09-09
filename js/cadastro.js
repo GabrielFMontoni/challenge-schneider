@@ -25,7 +25,7 @@ btnInput.addEventListener("click", (event) => {
       userPassword: password,
       userJob: job,
       userPoints: 0,
-      userRating: 61,
+      userRating: 80,
     };
 
     listUsers.push(User);
