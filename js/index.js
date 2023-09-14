@@ -1,4 +1,6 @@
 const login = JSON.parse(localStorage.getItem("login"));
+const rankingUsersToIndex = JSON.parse(localStorage.getItem("rankingToIndex"));
+
 const bntPopUp = document.querySelector("#btn_popup");
 const bntPitch = document.querySelector("#btn_popup2");
 const btnPerfil = document.querySelector("#mudarPerfil");
@@ -23,13 +25,13 @@ const imagensPerfil = document.querySelectorAll(".img__perfil");
 
 imagensPerfil.forEach((img) =>
   img.addEventListener("click", function trocaIcone() {
-    modalPerfil.src = img.src;
+    btnPerfil.src = img.src;
     modalPerfil.close();
+    
   })
 );
 
-upDate()
-
+upDate();
 
 function upDate() {
   login.forEach((element) => {
@@ -47,11 +49,15 @@ function upDate() {
     userNameLast.innerText = element.userLastName;
     userJobTitle.innerText = element.userJob;
 
-   // element.userPoints == 0 ? 
-    //pointsIndex.parentElement.innerText = "Interaja com a plataforma para ganhar pontos!" :
-    pointsIndex.innerText = element.userPoints;
-
-   
+    element.userPoints == 0
+      ? (pointsIndex.parentElement.innerText =
+          "Interaja com a plataforma para ganhar pontos!")
+      : (pointsIndex.innerText = element.userPoints);
+    upDateRankingIndex(
+      element.userPoints,
+      element.userName,
+      element.userRating
+    );
   });
 }
 
@@ -77,6 +83,80 @@ function upDatePoints() {
         upDate();
       }
     });
+  });
+}
+
+function upDateRankingIndex(points, name, position) {
+  const table = document.querySelector(".table-tbody");
+  const firstChildren = table.children[0];
+  const secoundChildren = table.children[1];
+  const lastChildren = table.children[2];
+  const list = rankingUsersToIndex[0];
+
+  if (points == 0) {
+    table.style.cssText = "display: none;";
+  } else {
+    let firstInfo, secondInfo, lastInfo;
+
+    if (points > 1271) {
+      firstInfo = [position, name, `${points} pts`];
+      secondInfo = [
+        list.secoundPosition.position,
+        list.secoundPosition.name,
+        list.secoundPosition.points,
+      ];
+      lastInfo = [
+        list.thirdPosition.position,
+        list.thirdPosition.name,
+        list.thirdPosition.points,
+      ];
+
+      addBackgroundcolor(firstChildren);
+    } else if (points < 30) {
+      firstInfo = [
+        list.antepnultimate.position,
+        list.antepnultimate.name,
+        list.antepnultimate.points,
+      ];
+      secondInfo = [
+        list.penultimatePosition.position,
+        list.penultimatePosition.name,
+        list.penultimatePosition.points,
+      ];
+      lastInfo = [position, name, `${points} pts`];
+
+      addBackgroundcolor(lastChildren);
+    } else {
+      firstInfo = [
+        list.previusPosition.position,
+        list.previusPosition.name,
+        list.previusPosition.points,
+      ];
+      secondInfo = [position, name, `${points} pts`];
+      lastInfo = [
+        list.nextPosition.position,
+        list.nextPosition.name,
+        list.nextPosition.points,
+      ];
+
+      addBackgroundcolor(secoundChildren);
+    }
+
+    setElementInfo(firstChildren, firstInfo);
+    setElementInfo(secoundChildren, secondInfo);
+    setElementInfo(lastChildren, lastInfo);
+  }
+}
+
+function setElementInfo(element, info) {
+  element.children[0].innerText = info[0];
+  element.children[1].innerText = info[1];
+  element.children[2].innerText = info[2];
+}
+
+function addBackgroundcolor(htmlElement) {
+  [...htmlElement.children].forEach((element) => {
+    element.classList.add("bg-warning");
   });
 }
 

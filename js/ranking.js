@@ -1,5 +1,7 @@
 const login = JSON.parse(localStorage.getItem("login"));
 const listUsers = JSON.parse(localStorage.getItem("user")) || [];
+const rankingUsersToIndex =
+  JSON.parse(localStorage.getItem("rankingToIndex")) || [];
 
 upDateRanking();
 ElementUser();
@@ -40,7 +42,7 @@ function sortList() {
     if (row.hasAttribute("id")) {
       position.innerText = index + 1;
       // para testar a ordenação
-      //login[0].userPoints = 500
+      //login[0].userPoints = 0;
       login[0].userRating = index + 1;
       localStorage.setItem("login", JSON.stringify(login));
     }
@@ -49,4 +51,70 @@ function sortList() {
     tbody.appendChild(row);
   });
 
+  const elementUser = tbody.querySelector("#user-ranking");
+  let previusElement;
+  let nextElement;
+  const pointsElementToRanking =
+    elementUser.children[2].textContent.split(" ")[0];
+
+  if (pointsElementToRanking > 1271) {
+    nextElement = elementUser.nextSibling;
+    const secoundSibling = nextElement.nextSibling;
+
+    const elementsPositionFirst = {
+      secoundPosition: {
+        position: nextElement.children[0].textContent,
+        name: nextElement.children[1].textContent,
+        points: nextElement.children[2].textContent,
+      },
+      thirdPosition: {
+        position: secoundSibling.children[0].textContent,
+        name: secoundSibling.children[1].textContent,
+        points: secoundSibling.children[2].textContent,
+      },
+    };
+
+    rankingUsersToIndex[0] = elementsPositionFirst;
+    localStorage.setItem("rankingToIndex", JSON.stringify(rankingUsersToIndex));
+  } else if (pointsElementToRanking < 30) {
+    previusElement = elementUser.previousSibling;
+    const thirdToLast = previusElement.previousSibling;
+
+    const elementsPosition = {
+      antepnultimate: {
+        position: thirdToLast.children[0].textContent,
+        name: thirdToLast.children[1].textContent,
+        points: thirdToLast.children[2].textContent,
+      },
+
+      penultimatePosition: {
+        position: previusElement.children[0].textContent,
+        name: previusElement.children[1].textContent,
+        points: previusElement.children[2].textContent,
+      },
+    };
+
+    rankingUsersToIndex[0] = elementsPosition;
+    localStorage.setItem("rankingToIndex", JSON.stringify(rankingUsersToIndex));
+  } else {
+    previusElement = elementUser.previousSibling;
+    nextElement = elementUser.nextSibling;
+
+    const elementsPosition = {
+      previusPosition: {
+        position: previusElement.children[0].textContent,
+        name: previusElement.children[1].textContent,
+        points: previusElement.children[2].textContent,
+      },
+
+      nextPosition: {
+        position: nextElement.children[0].textContent,
+        name: nextElement.children[1].textContent,
+        points: nextElement.children[2].textContent,
+      },
+    };
+
+    rankingUsersToIndex[0] = elementsPosition;
+    localStorage.setItem("rankingToIndex", JSON.stringify(rankingUsersToIndex));
+  }
 }
