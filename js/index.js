@@ -115,7 +115,7 @@ function upDateRankingIndex(points, name, position) {
         list.thirdPosition.name,
         list.thirdPosition.points,
       ];
-      table.style.cssText = "display: block;";
+      table.style.cssText = "display: flex;";
       addBackgroundcolor(firstChildren);
     } else if (points < 30) {
       firstInfo = [
@@ -129,7 +129,7 @@ function upDateRankingIndex(points, name, position) {
         list.penultimatePosition.points,
       ];
       lastInfo = [position, name, `${points} pts`];
-      table.style.cssText = "display: block;";
+      table.style.cssText = "display: flex;";
       addBackgroundcolor(lastChildren);
     } else {
       firstInfo = [
@@ -143,7 +143,7 @@ function upDateRankingIndex(points, name, position) {
         list.nextPosition.name,
         list.nextPosition.points,
       ];
-      table.style.cssText = "display: block;";
+      table.style.cssText = "display: flex;";
       addBackgroundcolor(secoundChildren);
     }
 
