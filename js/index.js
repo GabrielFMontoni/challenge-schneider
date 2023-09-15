@@ -25,9 +25,13 @@ const imagensPerfil = document.querySelectorAll(".img__perfil");
 
 imagensPerfil.forEach((img) =>
   img.addEventListener("click", function trocaIcone() {
+    let imgChoose = img.src;
+    imgChoose = imgChoose.split("/");
     btnPerfil.src = img.src;
+
+    login[0].userPicture = imgChoose[imgChoose.length - 1];
+    localStorage.setItem("login", JSON.stringify(login));
     modalPerfil.close();
-    
   })
 );
 
@@ -48,6 +52,7 @@ function upDate() {
     userNamefirst.innerText = element.userName;
     userNameLast.innerText = element.userLastName;
     userJobTitle.innerText = element.userJob;
+    btnPerfil.src = `./assets/icones/${element.userPicture}`;
 
     element.userPoints == 0
       ? (pointsIndex.parentElement.innerText =
@@ -110,7 +115,7 @@ function upDateRankingIndex(points, name, position) {
         list.thirdPosition.name,
         list.thirdPosition.points,
       ];
-
+      table.style.cssText = "display: block;";
       addBackgroundcolor(firstChildren);
     } else if (points < 30) {
       firstInfo = [
@@ -124,7 +129,7 @@ function upDateRankingIndex(points, name, position) {
         list.penultimatePosition.points,
       ];
       lastInfo = [position, name, `${points} pts`];
-
+      table.style.cssText = "display: block;";
       addBackgroundcolor(lastChildren);
     } else {
       firstInfo = [
@@ -138,7 +143,7 @@ function upDateRankingIndex(points, name, position) {
         list.nextPosition.name,
         list.nextPosition.points,
       ];
-
+      table.style.cssText = "display: block;";
       addBackgroundcolor(secoundChildren);
     }
 

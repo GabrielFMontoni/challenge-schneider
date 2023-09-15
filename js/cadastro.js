@@ -11,6 +11,9 @@ btnInput.addEventListener("click", (event) => {
   const password = document.querySelector("#password").value;
   const unitLocation = document.querySelector("#unidades");
   const textLocation = unitLocation.options[unitLocation.selectedIndex].text;
+  const gender = document.querySelector("#gender");
+  const textGender = gender.options[gender.selectedIndex].text;
+  const img = selectImage(textGender);
 
   if (name && lastName && email && job && password) {
     const date = new Date();
@@ -19,13 +22,14 @@ btnInput.addEventListener("click", (event) => {
     const User = {
       userName: name,
       userLastName: lastName,
-      userEmail: email,
+      userGender: textGender,
       userLocation: textLocation,
       userId: countID,
       userPassword: password,
       userJob: job,
       userPoints: 0,
       userRating: 80,
+      userPicture: img,
     };
 
     listUsers.push(User);
@@ -35,6 +39,36 @@ btnInput.addEventListener("click", (event) => {
     alert("Por favor, preencha todos os campos obrigatórios.");
   }
 });
+
+function selectImage(gender) {
+  let imgUser;
+  switch (gender) {
+    case "Mulher Cisgênero":
+      imgUser = "mulher1.png";
+      break;
+
+    case "Homem Cisgênero":
+      imgUser = "homem1.png";
+      break;
+
+    case "Homem Transgênero":
+      imgUser = "homem2.png";
+      break;
+
+    case "Mulher Transgênero":
+      imgUser = "mulher2.png";
+      break;
+
+    case "Gênero Não-Binário":
+      imgUser = "naobinario.png";
+      break;
+    case "Gênero-Fluido":
+      imgUser = "naobinaria.png";
+      break;
+  }
+
+  return imgUser;
+}
 
 function checkPassword() {
   const registrationPassword = document.querySelector(".input_pswd");
