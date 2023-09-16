@@ -1,4 +1,4 @@
-const listUsers = JSON.parse(localStorage.getItem("user")) || [];
+const listUsers = JSON.parse(localStorage.getItem("login")) || [];
 const btnInput = document.querySelector("#btn-input");
 
 btnInput.addEventListener("click", (event) => {
@@ -33,7 +33,7 @@ btnInput.addEventListener("click", (event) => {
     };
 
     listUsers.push(User);
-    localStorage.setItem("user", JSON.stringify(listUsers));
+    localStorage.setItem("login", JSON.stringify(listUsers));
     location.href = "../pages/login.html";
   } else {
     alert("Por favor, preencha todos os campos obrigatórios.");
