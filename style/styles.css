@@ -91,6 +91,10 @@ dialog {
   width: 80%;
 }
 
+.radius{
+  border-radius: 50%;
+}
+
 #modal_close {
   cursor: pointer;
 }
@@ -118,6 +122,8 @@ h3,
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
 
 }
+
+
 
 body .section {
   display: flex;
@@ -259,3 +265,18 @@ body .questions .answer .false, body .questions .answer .false:hover {
 .marginleft{
   margin-left: 120px;
 }
+
+
+  .table-tbody {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .table-tbody td {
+    width: 200px;
+    text-align: center;
+  }
+
+

@@ -1,13 +1,5 @@
-const listUsers = [{
-    name: "admin",
-    password: "0000"
-}, {
-    name: "paula",
-    password: "123"
-}, {
-    name: "pedro",
-    password: "4330"
-}];
+const listUsers = JSON.parse(localStorage.getItem('login')) || [];
+
 
 
 const submit = document.querySelector('#submit');
@@ -17,18 +9,21 @@ const submit = document.querySelector('#submit');
 function userCheck() {
 
     const userLogin = document.querySelector('#login_user').value;
-    const userPassword = document.querySelector('#login_password').value;
+    const userPasswordLogin = document.querySelector('#login_password').value;
 
-    let accessCheck = false
-
+    let accessCheck = false;
+    
     for (let i in listUsers) {
-        if (userLogin === listUsers[i].name && userPassword === listUsers[i].password) {
 
+        
+        if (userLogin === listUsers[i].userName && userPasswordLogin === listUsers[i].userPassword) {
+            const login = [];
+            login.push(listUsers[i])
             accessCheck = true
-
+            localStorage.setItem('login', JSON.stringify(login))
             break
         }
-    }
+    }   
 
     return showAccess(accessCheck);
 }
@@ -37,6 +32,7 @@ function userCheck() {
 function showAccess(access) {
 
     if (access) {
+  
         return location.href = '../index.html'
     } else {
         return alert("Usuario ou senha incorretos!")
@@ -45,7 +41,6 @@ function showAccess(access) {
 }
 
 
+
 submit.addEventListener('click', userCheck);
-
-
 

@@ -12,7 +12,7 @@ Challenge do primeiro ano da turma de Engenharia de Software na FIAP!
 Confira o site da Green Lions!
 
 ## :file_folder: Acesso ao projeto
-https://challenge-schneider-sable.vercel.app/
+https://greenlions.vercel.app/
 
 ## :hammer_and_wrench: Abrir e rodar o projeto
 Acesse o "index.html"
