@@ -16,7 +16,7 @@
 
 <body>
 
-    <header>
+    <header id="cabecalho">
         <nav class="navbar fixed-top navbar-expand-md bg-navbar ">
             <div class="nav_container px-3 align-middle d-flex justify-content-between w-100 align-items-center">
                 <div class="d-flex justify-content-between ">
@@ -76,8 +76,24 @@
         </nav>
     </header>
 
+<!-- Modal que manda para o cadastro -->
+<div id="irParaCadastro" class="position-absolute d-none h-100 w-100 bg-success d-flex text-center justify-content-center align-items-center flex-column">
+    <div>
+    <img src="assets/logo/Green_Lions_logo.png" alt="Logo da Green Lions" height="250" width="250">
+    <img src="assets/bandeiras/brasil.jpg" class="img-fluid pointer" height="50" width="50"
+                            alt="Bandeira Brasil">
+                        <img src="assets/bandeiras/espanhol.png" class="img-fluid pointer" height="40" width="40"
+                            alt="Bandeira Espanha">
+</div>
+    <h2 class="text-light">Cadastre-se antes de utilizar a plataforma</h2>
+    <br>
+    <button class="btn btn-lg btn-info w-25 " onclick="window.location.href='pages/register.html'"><a href="pages/register.html" class="text-decoration-none text-dark">Cadastrar</a></button>
+    <br>
+    <button class="btn btn-lg btn-warning w-25 " onclick="window.location.href='pages/login.html'"><a href="pages/login.html" class="text-decoration-none text-dark">Fazer Login</a></button>
+</div>
 
-    <main class=" row h-100  mt-3 container-fluid d-flex justify-content-lg-around justify-content-md-center ">
+
+    <main id="principal" class=" row h-100  mt-3 container-fluid d-flex justify-content-lg-around justify-content-md-center ">
 
         <div class="col-md col-lg-3 mt-5 d-none d-md-block">
             <section>
@@ -128,7 +144,7 @@
                         <p class="h5 " id="job-title"></p>
                         <div class="d-flex justify-content-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22"
-                                    height="22" fill="green" class="bi bi-caret-up-square-fill mb-1"
+                                    height="22" fill="green" class="bi bi-caret-up-square-fill mb-1" id="seta"
                                     viewBox="0 0 16 16">
                                     <path
                                         d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z" />
@@ -295,7 +311,7 @@
                                             </svg>
 
                                         </div>
-                                        \
+                                       
                                     </div>
 
 
@@ -477,6 +493,7 @@
 
 
         </div>
+
 
 
 

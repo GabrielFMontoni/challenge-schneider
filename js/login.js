@@ -20,7 +20,7 @@ function userCheck() {
             const login = [];
             login.push(listUsers[i])
             accessCheck = true
-            localStorage.setItem('login', JSON.stringify(login))
+            localStorage.setItem('loginAtual', JSON.stringify(login))
             break
         }
     }   

@@ -1,13 +1,17 @@
-const login = JSON.parse(localStorage.getItem("login"));
-const listUsers = JSON.parse(localStorage.getItem("user")) || [];
-const rankingUsersToIndex =
-  JSON.parse(localStorage.getItem("rankingToIndex")) || [];
 
-upDateRanking();
-ElementUser();
-sortList();
+  const login = JSON.parse(localStorage.getItem("loginAtual"));
+  const listUsers = JSON.parse(localStorage.getItem("user")) || [];
+  const rankingUsersToIndex =
+    JSON.parse(localStorage.getItem("rankingToIndex")) || [];
+  
+   if(document.location.pathname === "/pages/ranking.html"){
+  upDateRanking();
+  ElementUser();
+  sortList();
+  console.log('Fui Executado')
+    }
 
-function upDateRanking() {
+ function upDateRanking() {
   const name = document.querySelector("#user-name-ranking");
   const points = document.querySelector("#user-points-ranking");
   const location = [...document.querySelectorAll(".user-location")];
@@ -17,7 +21,7 @@ function upDateRanking() {
   location.forEach((element) => (element.innerText = login[0].userLocation));
 }
 
-function ElementUser() {
+ function ElementUser() {
   const element = document.querySelector("#user-ranking");
   const name = element.children[1];
   const points = element.children[2];
@@ -26,7 +30,7 @@ function ElementUser() {
   points.textContent = `${login[0].userPoints} pts`;
 }
 
-function sortList() {
+ function sortList() {
   const tbody = document.getElementById("list-tbody");
   const rows = [...tbody.querySelectorAll("tr")];
 
@@ -44,7 +48,7 @@ function sortList() {
       // para testar a ordenação
       //login[0].userPoints = 0;
       login[0].userRating = index + 1;
-      localStorage.setItem("login", JSON.stringify(login));
+      localStorage.setItem("loginAtual", JSON.stringify(login));
     }
     row.children[0].textContent = index + 1;
 
@@ -76,7 +80,7 @@ function sortList() {
 
     rankingUsersToIndex[0] = elementsPositionFirst;
     localStorage.setItem("rankingToIndex", JSON.stringify(rankingUsersToIndex));
-  } else if (pointsElementToRanking < 30) {
+  } else if (pointsElementToRanking < 30 ) {
     previusElement = elementUser.previousSibling;
     const thirdToLast = previusElement.previousSibling;
 
@@ -118,3 +122,7 @@ function sortList() {
     localStorage.setItem("rankingToIndex", JSON.stringify(rankingUsersToIndex));
   }
 }
+
+
+
+export { upDateRanking, ElementUser, sortList };

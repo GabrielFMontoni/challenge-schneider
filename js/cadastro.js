@@ -15,7 +15,15 @@ btnInput.addEventListener("click", (event) => {
   const textGender = gender.options[gender.selectedIndex].text;
   const img = selectImage(textGender);
 
+  const registrationPassword = document.querySelector(".input_pswd");
+  const registrationPasswordConfirm = document.querySelector(".input_confirm");
+
+
   if (name && lastName && email && job && password) {
+    if(registrationPassword.value !== registrationPasswordConfirm.value){
+      alert('As senhas não são iguais.')
+    }
+    else{
     const date = new Date();
     let countID = date.getTime();
 
@@ -35,9 +43,13 @@ btnInput.addEventListener("click", (event) => {
     listUsers.push(User);
     localStorage.setItem("login", JSON.stringify(listUsers));
     location.href = "../pages/login.html";
-  } else {
+  }}
+   else {
     alert("Por favor, preencha todos os campos obrigatórios.");
   }
+
+ 
+
 });
 
 function selectImage(gender) {
@@ -79,4 +91,5 @@ function checkPassword() {
   } else {
     registrationPasswordConfirm.setCustomValidity("As senhas não são iguais!");
   }
+  document.querySelector('.pass-incorrect').innerHTML = 'As senhas não são iguais';
 }
