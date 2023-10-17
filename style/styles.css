@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 
 :root {
   --green: #3dcc58;
@@ -9,25 +8,20 @@
   --button: #00b7e9;
   --button-hover: #3ac3e9;
   --color-font-title: #333333;
-
 }
-
 
 html {
   height: 100%;
   padding: 0;
-
 }
 
 body {
   height: 100%;
-  font-family: 'Asap', sans-serif;
+  font-family: "Asap", sans-serif;
   font-weight: 400;
   text-transform: none;
   letter-spacing: 1px;
   background-color: var(--bg-body);
-
-
 }
 
 .title-content {
@@ -37,7 +31,7 @@ body {
   width: 100px;
 }
 
-nav  h1{
+nav h1 {
   font-size: 25px;
   color: #626469;
 }
@@ -46,17 +40,13 @@ nav  h1{
   width: 70px;
 }
 
-li>.nav-link {
-  color: var(--white)
+li > .nav-link {
+  color: var(--white);
 }
 
 main {
   margin-top: 100px;
-
-
-
 }
-
 
 .bg-navbar {
   background-color: var(--green);
@@ -81,17 +71,17 @@ main {
 }
 
 dialog::backdrop {
-  background-color: rgb(0 0 0 / .7);
+  background-color: rgb(0 0 0 / 0.7);
 }
 
 dialog {
   border: none;
-  border-radius: .5rem;
-  box-shadow: 0 0 1rem rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
   width: 80%;
 }
 
-.radius{
+.radius {
   border-radius: 50%;
 }
 
@@ -103,7 +93,6 @@ h3,
 .perfil-name {
   font-size: 1.5vw;
   font-weight: 700;
-  ;
   color: var(--color-font-title);
 }
 
@@ -111,19 +100,15 @@ h3,
   font-size: 1.5rem;
 }
 
-.cards-padrao{
+.cards-padrao {
   height: 60vh;
-  
 }
-.pointer{
+.pointer {
   cursor: pointer;
 }
 .trofeu {
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .7));
-
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
 }
-
-
 
 body .section {
   display: flex;
@@ -131,9 +116,8 @@ body .section {
 
   height: 62%;
   width: 100%;
-  background: var(--bg-body)
+  background: var(--bg-body);
 }
-
 
 body .section .prize_help {
   width: 30%;
@@ -166,17 +150,17 @@ body .section .prize_help .help p:hover {
   cursor: pointer;
   width: 25%;
   height: 36px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   transition: 0.2s linear;
 }
-body .section .prize_help .help .used, body .section .prize_help .help .used:hover {
+body .section .prize_help .help .used,
+body .section .prize_help .help .used:hover {
   text-decoration: line-through;
   width: 25%;
   height: 22px;
   font-size: 0.51rem;
 }
 body .section .prize_help .prize {
-
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -201,14 +185,11 @@ body .section .prize_help .prize .win {
   color: #000;
 }
 body .questions {
-  
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: 1em;
-
 }
 body .questions .question {
   width: 100%;
@@ -256,27 +237,31 @@ body .questions .answer span:hover {
   cursor: pointer;
   transition: 0.2s linear;
 }
-body .questions .answer .true, body .questions .answer .true:hover {
+body .questions .answer .true,
+body .questions .answer .true:hover {
   background: green;
 }
-body .questions .answer .false, body .questions .answer .false:hover {
+body .questions .answer .false,
+body .questions .answer .false:hover {
   background: red;
 }
-.marginleft{
+.marginleft {
   margin-left: 120px;
 }
 
+.table-tbody {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .table-tbody {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.table-tbody td {
+  width: 200px;
+  text-align: center;
+}
 
-  .table-tbody td {
-    width: 200px;
-    text-align: center;
-  }
-
+textarea {
+  resize: none;
+}
 
