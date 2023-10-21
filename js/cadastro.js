@@ -38,6 +38,7 @@ btnInput.addEventListener("click", (event) => {
       userPoints: 0,
       userRating: 80,
       userPicture: img,
+      userPost : [],
     };
 
     listUsers.push(User);
