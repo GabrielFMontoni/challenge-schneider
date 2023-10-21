@@ -280,6 +280,7 @@ function post (){
     
     login[0].userPost.push(contentPost.value) 
     contentPost.value = '';
+    login[0].userPoints += 30;
     localStorage.setItem("loginAtual", JSON.stringify(login));
     location.reload();
   })
