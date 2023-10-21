@@ -29,9 +29,11 @@ imagensPerfil.forEach((img) =>
     let imgChoose = img.src;
     imgChoose = imgChoose.split("/");
     btnPerfil.src = img.src;
+   
 
     login[0].userPicture = imgChoose[imgChoose.length - 1];
     localStorage.setItem("loginAtual", JSON.stringify(login));
+    location.reload();
     modalPerfil.close();
   })
 );
@@ -82,6 +84,7 @@ if(!login){
     userNameLast.innerText = element.userLastName;
     userJobTitle.innerText = element.userJob;
     btnPerfil.src = `./assets/icones/${element.userPicture}`;
+    
     console.log(element.userRating)
     element.Rating > 80
       ? (pointsIndex.parentElement.innerText =
@@ -123,7 +126,7 @@ function upDatePoints() {
         const newPoints = currentPoints + 1;
 
         pointsElement.textContent = newPoints;
-  
+        
         login[0].userPoints += 10;
 
 
@@ -267,4 +270,82 @@ function removeBackgroundColor(htmlElement){
   });
 }
 
+
+function post (){
+  const btn = document.querySelector('.btn-custom')
+  const perfilPost = document.querySelector('.perfil-post')
+  perfilPost.src = `./assets/icones/${login[0].userPicture}`
+  btn.addEventListener('click', ()=>{
+    const contentPost = document.querySelector('.content')
+    
+    login[0].userPost.push(contentPost.value) 
+    contentPost.value = '';
+    localStorage.setItem("loginAtual", JSON.stringify(login));
+    location.reload();
+  })
+}
+
+function showPost(){
+  post = login[0].userPost 
+  if(post.length != 0){
+   const listPost =  document.querySelector('.section-posts')
+   
+    post.forEach((element) =>{
+      const newPost = `  <section class="border rounded p-5 mb-5 bg-light ">
+
+      <article>
+
+
+          <div class="d-flex mb-2">
+          <img src="./assets/icones/${login[0].userPicture}" class=" img__perfil_post rounded-circle mr-3"
+          alt="Foto de Perfil" width="50" height="50">
+              
+              <p class="fw-bold text-start ms-2 mt-3">${login[0].userName} ${login[0].userLastName} </p>
+
+          </div>
+
+          <section class="mb-5">
+              <p class="fs-5 mb-4">${element}</p>
+
+
+          </section>
+      </article>
+
+
+      <section>
+          <div class="card bg-light">
+              <div class="card-body">
+
+                  <form class="mb-4"><textarea class="form-control" rows="3"
+                          placeholder="Compartilhe seu conhecimento, deixe um comentário!"></textarea>
+                  </form>
+
+
+              </div>
+          </div>
+      </section>
+
+      <div class="d-flex justify-content-end gap-1 mt-3 align-items-center div-points">
+
+          <p class="h3 points">0</p> 
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+              fill="green" class="bi bi-arrow-up-square-fill pointer " viewBox="0 0 16 16">
+              <path
+                  d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+          </svg>
+
+  
+
+      </div>
+  </section>`;
+
+  listPost.insertAdjacentHTML('afterbegin', newPost);
+
+  upDatePoints();
+    })
+  }
+}
 upDatePoints();
+post();
+showPost();
