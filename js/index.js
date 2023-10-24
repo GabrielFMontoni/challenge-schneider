@@ -45,7 +45,7 @@ async function pegaListaRanking() {
       tempDiv.innerHTML = tabelaRanking[0];
       document.body.appendChild(tempDiv);
       tempDiv.style.display = "none";
-      // console.log(tempDiv)
+      console.log(tempDiv)
 
       upDateRanking();
       ElementUser();
@@ -109,12 +109,13 @@ function upDatePoints() {
     const btnElement = element.querySelector("svg");
 
     let clicked = false;
-
     btnElement.addEventListener("click", () => {
       if (!clicked) {
+
         const currentPoints = parseInt(pointsElement.textContent);
-        const newPoints = currentPoints + 1;
         
+        const newPoints = currentPoints + 1;
+        console.log(newPoints);
         pointsElement.textContent = newPoints;
 
         login[0].userPoints += 10;
@@ -261,7 +262,7 @@ function post() {
 
     login[0].userPost.push(contentPost.value);
     contentPost.value = "";
-    login[0].userPoints += 30;
+    login[0].userPoints += 35;
     localStorage.setItem("loginAtual", JSON.stringify(login));
     location.reload();
     
@@ -381,7 +382,7 @@ function showPost() {
 }
  
 
-upDatePoints();
+// upDatePoints();
 post();
 
 postComment();

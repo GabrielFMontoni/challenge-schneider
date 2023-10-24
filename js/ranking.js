@@ -80,7 +80,7 @@
 
     rankingUsersToIndex[0] = elementsPositionFirst;
     localStorage.setItem("rankingToIndex", JSON.stringify(rankingUsersToIndex));
-  } else if (pointsElementToRanking < 30 ) {
+  } else if (pointsElementToRanking <= 30 ) {
     previusElement = elementUser.previousSibling;
     const thirdToLast = previusElement.previousSibling;
 
