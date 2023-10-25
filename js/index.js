@@ -11,6 +11,7 @@ const modalClose2 = document.querySelector("#modal_close2");
 const modalClose3 = document.querySelector("#modal_close3");
 const pointsIndex = document.querySelector("#user-points");
 const divPoints = document.querySelectorAll(".div-points");
+
 modalClose.addEventListener("click", () => modal.close());
 bntPopUp.addEventListener("click", () => modal.showModal());
 
@@ -104,13 +105,19 @@ function upDate() {
 function upDatePoints() {
   const divPoints = document.querySelectorAll(".div-points");
 
+
   divPoints.forEach((element) => {
+    if(!element.classList.contains("botao-foi-clicado")){
     const pointsElement = element.querySelector(".points");
     const btnElement = element.querySelector("svg");
-
-    let clicked = false;
-    btnElement.addEventListener("click", () => {
-      if (!clicked) {
+    if(btnElement){
+    console.log("Atribuicao ocorreu!");
+    }
+   
+    
+    btnElement.addEventListener("click", function AddPoints(){
+    
+    
 
         const currentPoints = parseInt(pointsElement.textContent);
         
@@ -120,14 +127,18 @@ function upDatePoints() {
 
         login[0].userPoints += 10;
 
-        clicked = true;
         localStorage.setItem("loginAtual", JSON.stringify(login));
         // console.log(login[0])
         upDateRanking();
         ElementUser();
         upDate();
-      }
-    });
+        btnElement.removeEventListener("click", AddPoints);
+    
+   
+    }
+    )
+    element.classList.add('botao-foi-clicado')
+  }
   });
 }
 
